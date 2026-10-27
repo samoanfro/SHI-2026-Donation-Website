@@ -98,3 +98,50 @@ Presentation/content update within the existing static HTML/CSS/JS project. Exis
 Hero: replace the contents of `.photo-placeholder` with a licensed documentary image of authentic everyday connection, using descriptive alt text and responsive object-fit sizing. Remove the placeholder caption only when the asset and usage permissions are approved. Avoid using a stock photo as evidence of SHI participation.
 
 Video: replace `.video-placeholder` with an accessible approved video player, preserving #david-video and its heading; supply captions and a transcript, and do not autoplay. Story cards: replace each photo and placeholder copy together after consent and factual review. The existing social-sharing graphic remains campaign-branded; it can be refreshed with approved photography later.
+
+## Website 2.0 — October 27, 2026
+
+### Restore checkpoint
+
+Before any Website 2.0 edits, initialized this previously unversioned project and committed its existing source/assets/documentation. Checkpoint commit: `e2facf1`; tag: `pre-website-2.0`. The generated `dist/` is ignored and reproducible with `npm run build`.
+
+For a safe, separate copy of the old site without overwriting current work, run from this project:
+
+```sh
+mkdir -p checkpoint-preview
+git archive pre-website-2.0 | tar -x -C checkpoint-preview
+cd checkpoint-preview
+npm run build
+```
+
+Use that extracted copy to inspect/restore selected files; do not use a destructive Git reset on later work.
+
+### Final changes
+
+- Preserved the static HTML/CSS/JS codebase, system typography, forest/cream/terracotta palette, payment guards, sharing configuration, budget values, and existing interaction hooks. No packages, paid services, backend, or integrations added.
+- Added sticky navigation with the requested section labels and mobile anchor clearance.
+- Replaced the hero headline and supporting copy with the exact Website 2.0 wording; added Help Build Connection and Discover Social Health CTAs. Retained a prominent documentary-photo area explicitly marked as a placeholder.
+- Added a relatable problem narrative and concrete daily examples for physical, mental, and social health.
+- Reworked David’s introduction into a substantial editorial section beside a portrait/video placeholder. David’s vision is based on the supplied brief. His professional experience, biography, Kirsty’s inspiration, and Quit Trip’n history remain explicitly pending verification; no credentials or quotations were invented.
+- Added Learn it / Live it / Pass it on and a concise set of proposed initiatives for schools, families, first responders, and communities. These are campaign proposals, not claims of existing programs or partnerships.
+- Consolidated repetitive empty participant-story cards into one clearly labeled pending-voices note.
+- Strengthened the donation appeal and preserved donor-friendly explanations of every proposed budget category. $250,000 / 100% reconciles; all allocation and goal approval labels remain visible.
+- Contact, legal disclosures, and social links still use existing honest placeholders; no invented contact details, EIN, tax claims, donations, or results.
+
+### Verification and preview
+
+`npm run build` and `npm run check` passed. Browser review confirmed Website 2.0 content is served at http://127.0.0.1:4173/. Reused the existing local server after a new launch attempt reported the port already occupied; the browser verified the current build, rather than starting another server.
+
+Desktop (1200 CSS px), tablet (853 CSS px), and narrow mobile (325 CSS px) had no horizontal overflow. Mobile menu opens, Your Impact navigates to #funds and closes the menu, the sticky header clears the destination heading, and all fragment targets exist. Checkout still has no href and remains disabled. No live PayPal activation or deployment was performed.
+
+### Outstanding assets and launch blockers
+
+- Licensed/approved documentary hero photo; approved David portrait/video, captions, transcript, and biography; verified origin details and consented participant stories.
+- Owner/board review of new proposed initiative language, especially first-responder scope, and approval of the proposed goal/allocation.
+- Verified contact, legal/privacy disclosures, and official social links.
+- Hosting/DNS setup for the already approved domain and explicit deployment authorization.
+- Published, owner-verified PayPal donor URL and confirmation of available payment/recurring options when the owner decides to open giving. PayPal remains saved/unpublished per the last owner direction; accountVerified, activationApproved, siteLive, and launchApproved remain false.
+
+## Shared GitHub repository
+
+Owner-provided repository: https://github.com/samoanfro/SHI-2026-Donation-Website. It was empty and public when inspected. This repository is the shared source/handoff location for cross-platform work; pushing source does not deploy or activate the website. README.md provides setup, file map, collaboration conventions, and approval boundaries. The pre-Website-2.0 tag is retained for restoration. Pull current main before continuing work; do not overwrite parallel changes or commit private data.
